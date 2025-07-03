@@ -206,6 +206,8 @@ shareBtn.addEventListener("click", async (e) => {
     }
 });
 
-
-
-
+if (window.location.hostname === "adrishikharchowdhury.github.io") {
+    const baseTag = document.createElement("base");
+    baseTag.href = "/Who Let The Dogs Out/";
+    document.head.appendChild(baseTag);
+  }
