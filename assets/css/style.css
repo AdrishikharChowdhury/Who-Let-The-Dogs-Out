@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bgcolor:#F3FFB6;
+    --section-color:#D38B5D;
+    --btn-color:#410B13;
+    --img-holder:#99621E;
+    --fact-color:#355834;
+}
+
+body{
+    background-color: var(--bgcolor);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15%;
+    gap: 1rem;
+    text-align: center;
+}
+
+.heading{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.subheading{
+    font-size: 1.5rem;
+}
+
+main{
+    height: 85%;
+    background-color: var(--section-color);
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0.4rem 0.8rem 1.2rem 0.5rem rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+}
+
+#dog-photo{
+    width: 80%;
+    height: 50%;
+    background-color: var(--fact-color);
+    border: var(--img-holder) 0.4rem solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: contain;
+    box-shadow: 0.4rem 0.8rem 1.2rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.dropdowns, .cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 90%;
+    height: 8%;
+}
+
+.cta{
+    flex-wrap: wrap;
+}
+
+select{
+    width: 40%;
+    height: 100%;
+    background-color: var(--btn-color);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 2rem;
+    padding-left: 2rem;
+}
+
+.facts{
+    display: none;
+    justify-content: center;
+    align-items:center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 80%;
+    height: max-content;
+    font-size: 1rem;
+    color: white;
+    border: var(--img-holder) 0.4rem solid;
+    border-radius: 2rem;
+    text-align: center;
+    line-height: 1.6;
+    background-color: var(--fact-color);
+}
+
+#generate{
+    width: 60%;
+    height: 8%;
+    background-color: var(--btn-color);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+canvas,#copy{
+    display: none;
+}
+
+#copy,#download,#share{
+    width: 13%;
+    height: 100%;
+    background-color: var(--btn-color);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50%;
+}
+
+button,select{
+    cursor: pointer;
+}
