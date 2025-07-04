@@ -136,6 +136,11 @@ canvas,#copy{
     border-radius: 1rem;
 }
 
-button,select{
+.cta button,select,button{
     cursor: pointer;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.cta button:hover, select:hover, button:hover{
+    background-color: #180105 !important;
 }
