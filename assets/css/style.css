@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
@@ -12,10 +13,14 @@
 }
 
 body{
+    overflow-x: hidden;
     background-color: var(--bgcolor);
     display: flex;
-    height: 100vh;
-    width: 100%;
+    padding: 2rem;
+    min-width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -42,21 +47,24 @@ header{
 }
 
 main{
-    height: 85%;
+    min-height: 75%;
+    height: max-content;
     background-color: var(--section-color);
     width: 30%;
+    max-width: 100vw;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     border-radius: 2rem;
     box-shadow: 0.4rem 0.8rem 1.2rem 0.5rem rgba(0, 0, 0, 0.25);
-    padding: 1rem;
+    padding: 2rem;
+    gap: 2rem;
 }
 
 #dog-photo{
     width: 80%;
-    height: 50%;
+    height: 20rem;
     background-color: var(--fact-color);
     border: var(--img-holder) 0.4rem solid;
     display: flex;
@@ -74,8 +82,9 @@ main{
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    width: 90%;
-    height: 8%;
+    width: max-content;
+    height: max-content;
+    flex-wrap: wrap;
 }
 
 .cta{
@@ -83,14 +92,15 @@ main{
 }
 
 select{
-    width: 40%;
-    height: 100%;
+    width: max-content;
+    height: max-content;
     background-color: var(--btn-color);
     color: white;
     font-size: 1.2rem;
     border: none;
     border-radius: 2rem;
     padding-left: 2rem;
+    padding: 1.5rem;
 }
 
 .facts{
@@ -113,27 +123,32 @@ select{
 }
 
 #generate{
-    width: 60%;
-    height: 8%;
+    width: max-content;
+    height: max-content;
     background-color: var(--btn-color);
     color: white;
     font-size: 1.2rem;
     border: none;
     border-radius: 2rem;
-}
-
-canvas,#copy{
-    display: none;
+    padding: 2rem;
 }
 
 #copy,#download,#share{
-    width: 13%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: max-content;
+    height: max-content;
     background-color: var(--btn-color);
     color: white;
     font-size: 1.2rem;
     border: none;
     border-radius: 1rem;
+}
+
+canvas,#copy{
+    display: none;
 }
 
 .cta button,select,button{
